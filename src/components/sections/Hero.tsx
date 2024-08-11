@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+// src/components/sections/Hero.jsx
+import React, { useState, useEffect } from 'react';
 
 const navDelay = 1000; // Example delay time in milliseconds (adjust as needed)
 
@@ -58,7 +59,7 @@ const Hero = () => {
   return (
     <div className="hero">
       {isMounted && items.map((item, i) => (
-        <div key={i} style={{ transitionDelay: `${i * 100}ms` }}>
+        <div className='text-slate-50' key={i} style={{ transitionDelay: `${i * 100}ms` }}>
           {item}
         </div>
       ))}
