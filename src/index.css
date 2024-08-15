@@ -8,3 +8,7 @@ body {
     @apply bg-[#0f172a] text-slate-400;
 
 }
+
+html {
+    scroll-behavior: smooth;
+}
