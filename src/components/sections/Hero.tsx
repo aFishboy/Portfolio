@@ -1,6 +1,6 @@
 // src/components/sections/Hero.jsx
 import React, { useState, useEffect } from "react";
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 
 const navDelay = 1000; // Example delay time in milliseconds (adjust as needed)
 
@@ -41,25 +41,24 @@ const Hero = () => {
             <NavLink to="/">Sam Howard</NavLink>
         </h1>
     );
-    const two = <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Software Engineer</h2>;
+    const two = (
+        <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+            Software Engineer
+        </h2>
+    );
     const three = (
         <h3 className="mt-4 max-w-xs leading-normal">
             I build pixel-perfect, engaging, and accessible digital experiences.
         </h3>
     );
-    
-    
 
     const items = [one, two, three];
 
     return (
-        <div className="hero">
+        <div>
             {isMounted &&
                 items.map((item, i) => (
-                    <div
-                        key={i}
-                        style={{ transitionDelay: `${i * 100}ms` }}
-                    >
+                    <div key={i} style={{ transitionDelay: `${i * 100}ms` }}>
                         {item}
                     </div>
                 ))}
